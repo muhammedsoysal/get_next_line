@@ -6,7 +6,7 @@
 /*   By: musoysal <musoysal@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/11 14:11:49 by musoysal          #+#    #+#             */
-/*   Updated: 2024/11/24 14:53:42 by musoysal         ###   ########.fr       */
+/*   Updated: 2024/11/24 15:03:14 by musoysal         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -99,7 +99,7 @@ char	*get_next_line(int fd)
 	if (fd < 0 || BUFFER_SIZE <= 0)
 		return (NULL);
 	str[fd] = ft_read_text(fd, str[fd]);
-	if (!str)
+	if (!str[fd])
 		return (NULL);
 	line = ft_extract_line(str[fd]);
 	str[fd] = ft_update_text(str[fd]);
